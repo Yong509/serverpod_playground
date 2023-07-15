@@ -1,0 +1,14 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 8090,
+      "driver": "PostgreSQL",
+      "name": "first_serverpod_app",
+      "database": "first_serverpod_app",
+      "username": "postgres",
+      "password": "uPQn7ujUR4NtlgPfc4Zu59k4rQiUvZ9p"
+    }
+  ]
+}

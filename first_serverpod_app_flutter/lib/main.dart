@@ -74,7 +74,14 @@ class MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: const EdgeInsets.only(bottom: 16.0),
               child: ElevatedButton(
-                onPressed: _callHello,
+                onPressed: () async {
+                  await client.task.createTask(
+                    Task(
+                        taskTitle: "test",
+                        taskDateTime: "test",
+                        isTaskDone: false),
+                  );
+                },
                 child: const Text('Send to Server'),
               ),
             ),
@@ -89,8 +96,6 @@ class MyHomePageState extends State<MyHomePage> {
   }
 }
 
-// _ResultDisplays shows the result of the call. Either the returned result from
-// the `example.hello` endpoint method or an error message.
 class _ResultDisplay extends StatelessWidget {
   final String? resultMessage;
   final String? errorMessage;
